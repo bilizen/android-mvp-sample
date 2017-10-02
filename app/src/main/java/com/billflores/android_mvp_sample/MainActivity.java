@@ -1,16 +1,21 @@
 package com.billflores.android_mvp_sample;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+/**
+ * Created by bill on 2/10/17.
+ */
 
-public class MainActivity extends AppCompatActivity {
+public interface MainActivity {
+    interface View{
+        void showresult(String result);
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    interface Presenter{
+        void showresult(String result);
+        void alcuadrado(String data);
+        void showError(String error);
+    }
 
-
-
+    interface Model{
+        void alcuadrado(String data);
     }
 }
