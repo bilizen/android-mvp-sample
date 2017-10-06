@@ -1,4 +1,4 @@
-package com.billflores.android_mvp_sample;
+package com.billflores.android_mvp_sample.activity;
 
 /**
  * Created by bill on 2/10/17.
@@ -25,5 +25,17 @@ public class MainAcitivityPresenter implements MainActivity.Presenter {
         if(mainActivityView!=null){
             mainActivityModel.alcuadrado(data);
         }
+    }
+
+    @Override
+    public void showError(String error) {
+        if(mainActivityView!=null){
+            mainActivityView.showError(error);
+        }
+    }
+
+    @Override
+    public void showList() {
+
     }
 }

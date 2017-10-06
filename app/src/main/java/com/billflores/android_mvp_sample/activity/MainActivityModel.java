@@ -1,4 +1,4 @@
-package com.billflores.android_mvp_sample;
+package com.billflores.android_mvp_sample.activity;
 
 /**
  * Created by bill on 2/10/17.
@@ -8,6 +8,7 @@ public class MainActivityModel implements MainActivity.Model{
     private MainActivity.Presenter mainAcitivityPresenter;
     private Double aDouble;
 
+
     public MainActivityModel(MainActivity.Presenter mainAcitivityPresenter) {
     this.mainAcitivityPresenter=mainAcitivityPresenter;
     }
@@ -15,7 +16,7 @@ public class MainActivityModel implements MainActivity.Model{
     @Override
     public void alcuadrado(String data) {
         if(data.equals("")){
-        mainAcitivityPresenter.
+            mainAcitivityPresenter.showError("Error");
         }else{
             aDouble=Double.valueOf(data)*Double.valueOf(data);
             mainAcitivityPresenter.showresult(String.valueOf(aDouble));
