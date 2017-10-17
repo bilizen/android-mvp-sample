@@ -39,6 +39,7 @@ public class MainActivityView extends AppCompatActivity implements MainActivity.
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerViewPerson.setLayoutManager(linearLayoutManager);
 
+
         presenter= new MainAcitivityPresenter(this);
         buttonCalcular.setOnClickListener(this);
         ArrayList<Person> personArrayList = new ArrayList<>();
@@ -63,7 +64,8 @@ public class MainActivityView extends AppCompatActivity implements MainActivity.
 
     @Override
     public void showList(ArrayList<Person> arrayList) {
-        recyclerViewPerson.setAdapter();
+        adapterPerson=new AdapterPerson(arrayList);
+        recyclerViewPerson.setAdapter(adapterPerson);
     }
 
     @Override

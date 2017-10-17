@@ -49,7 +49,7 @@ public class AdapterPerson extends RecyclerView.Adapter<AdapterPerson.MyViewhold
         }
         public void onbind(Person person){
             textViewName.setText(person.getName());
-            textViewDni.setText(person.getDni());
+            textViewDni.setText(String.valueOf(person.getDni()));
 
         }
 
