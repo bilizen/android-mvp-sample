@@ -20,7 +20,6 @@ public interface MainActivity {
         void showresult(String result);
         void alcuadrado(String data);
         void showError(String error);
-        void showList();
     }
 
     interface Model{

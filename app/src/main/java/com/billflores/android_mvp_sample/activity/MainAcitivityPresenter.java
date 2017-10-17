@@ -34,8 +34,4 @@ public class MainAcitivityPresenter implements MainActivity.Presenter {
         }
     }
 
-    @Override
-    public void showList() {
-
-    }
 }
