@@ -1,4 +1,4 @@
-package com.billflores.android_mvp_sample.entity;
+package com.billflores.android_mvp_sample.data.entity;
 
 /**
  * Created by rodrigo on 5/10/17.

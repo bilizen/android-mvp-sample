@@ -1,6 +1,5 @@
 package com.billflores.android_mvp_sample.activity;
 
-import com.billflores.android_mvp_sample.entity.Person;
 
 import java.util.ArrayList;
 

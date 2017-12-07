@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.billflores.android_mvp_sample.R;
-import com.billflores.android_mvp_sample.entity.Person;
+import com.billflores.android_mvp_sample.data.entity.Person;
 
 import java.util.ArrayList;
 
