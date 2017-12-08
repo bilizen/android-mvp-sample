@@ -1,4 +1,4 @@
-package com.billflores.android_mvp_sample.adapter;
+package com.billflores.android_mvp_sample.presentation.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.billflores.android_mvp_sample.R;
-import com.billflores.android_mvp_sample.data.entity.Person;
+import com.billflores.android_mvp_sample.domain.entity.Rutas;
 
 import java.util.ArrayList;
 
@@ -15,29 +15,29 @@ import java.util.ArrayList;
  * Created by bill on 5/10/17.
  */
 
-public class AdapterPerson extends RecyclerView.Adapter<AdapterPerson.MyViewholder>{
+public class AdapterRutas extends RecyclerView.Adapter<AdapterRutas.MyViewholder>{
 
-    public ArrayList<Person> personArrayList;
+    public ArrayList<Rutas> rutasArrayList;
 
-    public AdapterPerson(ArrayList<Person> personArrayList) {
-        this.personArrayList = personArrayList;
+    public AdapterRutas(ArrayList<Rutas> personArrayList) {
+        this.rutasArrayList = personArrayList;
     }
 
     @Override
     public MyViewholder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_person_row,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_rutas_row,parent,false);
         return new MyViewholder(view);
     }
 
     @Override
     public void onBindViewHolder(MyViewholder holder, int position) {
-        Person person=personArrayList.get(position);
-        holder.onbind(person);
+        Rutas rutas=rutasArrayList.get(position);
+        holder.onbind(rutas);
     }
 
     @Override
     public int getItemCount() {
-        return personArrayList.size();
+        return rutasArrayList.size();
     }
 
     public static class MyViewholder extends RecyclerView.ViewHolder {
@@ -47,9 +47,9 @@ public class AdapterPerson extends RecyclerView.Adapter<AdapterPerson.MyViewhold
             textViewName=itemView.findViewById(R.id.textViewName);
             textViewDni=itemView.findViewById(R.id.textViewDni);
         }
-        public void onbind(Person person){
-            textViewName.setText(person.getName());
-            textViewDni.setText(String.valueOf(person.getDni()));
+        public void onbind(Rutas rutas){
+            textViewName.setText(rutas.getName());
+            textViewDni.setText(String.valueOf(rutas.getId()));
 
         }
 

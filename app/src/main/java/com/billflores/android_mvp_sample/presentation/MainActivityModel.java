@@ -1,4 +1,4 @@
-package com.billflores.android_mvp_sample.activity;
+package com.billflores.android_mvp_sample.presentation;
 
 /**
  * Created by bill on 2/10/17.

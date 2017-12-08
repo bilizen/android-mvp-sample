@@ -9,27 +9,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.billflores.android_mvp_sample.activity.MainActivityView">
-
-    <EditText
-        android:id="@+id/editTextNum"
-        android:inputType="numberDecimal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/buttonCalcular"
-        android:text="calcular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    tools:context=".presentation.view.RutasView">
 
     <TextView
         android:id="@+id/textViewResult"
+        android:text="Sample of list routes"
         android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewPerson"
+        android:id="@+id/recyclerViewRutas"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
 
