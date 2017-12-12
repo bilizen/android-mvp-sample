@@ -12,7 +12,7 @@ public class ApiClient {
 
     public static ServicesApiInterface processApi(){
         if(retrofit2Api==null){
-            Retrofit retrofit=new Retrofit.Builder().baseUrl("http://192.168.0.100:80/WSYuraMobile/api/Mobile/").
+            Retrofit retrofit=new Retrofit.Builder().baseUrl("http://192.168.1.40:80/WSYuraMobile/api/Mobile/").
                     addConverterFactory(GsonConverterFactory.create()).build();
             retrofit2Api=retrofit.create(ServicesApiInterface.class);
         }

@@ -33,7 +33,7 @@ public class RutasInteractor implements RutasInteractorInterface{
         AllDataRequest allDataRequest= new AllDataRequest();
         allDataRequest.setDate(date);
         allDataRequest.setIdOcm(idOcm);
-
+        rutasPresenterInterface.showProgressDialog();
         Call<AllDataResponse> getAllData = ApiClient.processApi().getAllData(allDataRequest);
         getAllData.enqueue(new Callback<AllDataResponse>() {
             @Override
@@ -43,10 +43,12 @@ public class RutasInteractor implements RutasInteractorInterface{
                 }else{
                     rutasPresenterInterface.showMessage("an error occurred... ");
                 }
+                rutasPresenterInterface.hideProgressDialog();
             }
 
             @Override
             public void onFailure(Call<AllDataResponse> call, Throwable t) {
+                rutasPresenterInterface.hideProgressDialog();
                 rutasPresenterInterface.showMessage("an error occurred... ");
             }
         });

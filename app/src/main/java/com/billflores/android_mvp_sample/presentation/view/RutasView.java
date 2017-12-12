@@ -33,7 +33,7 @@ public class RutasView extends AppCompatActivity implements RutasViewInterface{
         recyclerViewRutas=(RecyclerView) findViewById(R.id.recyclerViewRutas);
 
         //progressDialog
-        progress = new ProgressDialog(RutasView.this);
+        progress = new ProgressDialog(this);
         progress.setMessage("Cargando ...");
         progress.setCanceledOnTouchOutside(false);
 
@@ -43,7 +43,7 @@ public class RutasView extends AppCompatActivity implements RutasViewInterface{
         recyclerViewRutas.setLayoutManager(linearLayoutManager);
 
         rutasPresenterInterface= new RutasPresenter(this);
-        rutasPresenterInterface.getAllData("20170923",1);
+        rutasPresenterInterface.getAllData("20170626",5);
 
     }
 

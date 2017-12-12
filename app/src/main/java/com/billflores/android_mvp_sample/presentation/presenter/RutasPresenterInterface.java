@@ -12,4 +12,6 @@ public interface RutasPresenterInterface {
     void getAllData(String date , int idOcm);
     void showMessage(String message);
     void showArrayList(ArrayList<Rutas> rutasArrayList);
+    void showProgressDialog();
+    void hideProgressDialog();
 }

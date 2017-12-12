@@ -24,14 +24,22 @@ public class RutasPresenter implements RutasPresenterInterface {
 
     @Override
     public void getAllData(String date , int idOcm) {
-        rutasViewInterface.showProgressDialog();
         rutasInteractorInterface.getListRoutes(date,idOcm);
-        rutasViewInterface.hideProgressDialog();
     }
 
     @Override
     public void showArrayList(ArrayList<Rutas> rutasArrayList){
         rutasViewInterface.showList(rutasArrayList);
+    }
+
+    @Override
+    public void showProgressDialog() {
+        rutasViewInterface.showProgressDialog();
+    }
+
+    @Override
+    public void hideProgressDialog() {
+        rutasViewInterface.hideProgressDialog();
     }
 
     @Override
